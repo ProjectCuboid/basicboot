@@ -1,12 +1,17 @@
-# *[CUBIOS]* ![kernelbadge](https://img.shields.io/badge/kernel-c-blue)
+# **[CUBIOS]** ![kernelbadge](https://img.shields.io/badge/kernel-c-blue)
 
-### Makefile instructions
+### Makefile Commands
 
-- 🧹 _clean_ artifacts - `make clean`
-- 🏗️ _build_ binaries - `make`
-- ▶️ _run_ binaries - `make run`
+| Command | Description |
+|---------|-------------|
+| 🧹 `make clean` | Clean build artifacts |
+| 🏗️ `make` | Build binaries |
+| ▶️ `make run` | Run binaries |
 
 ### Requirements
-  - 🪐 `nasm`
-  - 💽 `i686-linux-musl-gcc` ( may be replaced )
-  - 🔗 `i686-linux-musl-ls` ( may be replaced )
+
+| Tool | Purpose / Notes |
+|------|----------------|
+| 🪐 `nasm` | Assembler for boot/kernel |
+| 💽 `i686-linux-musl-gcc` | Cross-compiler (may be replaced) |
+| 🔗 `i686-linux-musl-ld` | Linker (may be replaced) |
