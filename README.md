@@ -6,7 +6,7 @@
 ![opensource](https://img.shields.io/badge/opensource-green?style=for-the-badge&logo=opensourceinitiative&logoColor=%23ffffff&color=%236CC24A)
 ![release](https://img.shields.io/badge/2.1.1-beta-red?style=for-the-badge&logo=github)
 ![qemu](https://img.shields.io/badge/qemu-black?style=for-the-badge&logo=qemu)
-![vbox](https://img.shields.io/badge/oracle%20virtualbox-yellow?style=for-the-badge&logo=virtualbox)
+![vbox](https://img.shields.io/badge/virtualbox-yellow?style=for-the-badge&logo=virtualbox)
 
 **A minimal operating system kernel built from scratch**
 
