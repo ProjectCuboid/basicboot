@@ -92,6 +92,11 @@ i686-linux-musl-gcc --version
 i686-linux-musl-ld --version
 ```
 
+### Using in VirtualBox
+```bash
+VBoxManage convertfromraw os.img os.vdi --format VDI
+```
+Then create a new VM in VirtualBox and attach `os.vdi` as a virtual hard disk. ( Settings > Storage > Add Hard Disk, select `os.vdi`, delete the existing virtual disk if any. )
 ### ⚠️ Important
 
 **\*** — Untested software/commands
