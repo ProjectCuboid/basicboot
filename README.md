@@ -1,5 +1,9 @@
 ![Logo](assets/logo.svg)
-![kernelbadge](https://img.shields.io/badge/kernel-c-blue)
+
+![kernelbadge](https://img.shields.io/badge/kernel-blue?style=for-the-badge&logo=c&logoColor=%23ffffff
+)
+![opensource](https://img.shields.io/badge/opensource-green?style=for-the-badge&logo=opensourceinitiative&logoColor=%23ffffff&color=%236CC24A
+)
 
 ### Makefile Commands
 
