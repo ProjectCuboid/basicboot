@@ -1,4 +1,5 @@
-# **[CUBIOS]** ![kernelbadge](https://img.shields.io/badge/kernel-c-blue)
+![Logo](assets/logo.svg)
+![kernelbadge](https://img.shields.io/badge/kernel-c-blue)
 
 ### Makefile Commands
 
