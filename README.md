@@ -10,8 +10,6 @@
 
 **A minimal operating system kernel built from scratch**
 
-[Features](#features) • [Quick Start](#quick-start) • [Requirements](#requirements) • [Installation](#installation)
-
 ---
 
 </div>
