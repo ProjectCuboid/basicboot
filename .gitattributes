@@ -2,3 +2,5 @@
 *.img filter=lfs diff=lfs merge=lfs -text
 /kernel.bin filter=lfs diff=lfs merge=lfs -text
 /os.img filter=lfs diff=lfs merge=lfs -text
+.git/lfs/objects/9d/25/9d2585f3c792ea8f62ed5ae00b514f23bd6b4683b8f6385dca2616587ad3f102 filter=lfs diff=lfs merge=lfs -text
+.git/lfs/objects/e9/db/e9dbf0af2165bd9fa167b13e1b05eaa20bd5328adf5913666d5ad4795b80cc90 filter=lfs diff=lfs merge=lfs -text
