@@ -101,5 +101,5 @@ i686-linux-musl-ld --version
 ---
 
 <div align="center">
-Made with curiosity
+Made with ✨curiosity✨
 </div>
