@@ -4,7 +4,7 @@
 
 ![kernelbadge](https://img.shields.io/badge/kernel-blue?style=for-the-badge&logo=c&logoColor=%23ffffff)
 ![opensource](https://img.shields.io/badge/opensource-green?style=for-the-badge&logo=opensourceinitiative&logoColor=%23ffffff&color=%236CC24A)
-![release](https://img.shields.io/badge/2.1.1-beta-red?style=for-the-badge&logo=github)
+![release](https://img.shields.io/badge/2.1.2-beta-red?style=for-the-badge&logo=github)
 ![qemu](https://img.shields.io/badge/qemu-black?style=for-the-badge&logo=qemu)
 ![vbox](https://img.shields.io/badge/virtualbox-yellow?style=for-the-badge&logo=*virtualbox)
 
