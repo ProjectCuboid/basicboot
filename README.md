@@ -8,7 +8,7 @@
 ![qemu](https://img.shields.io/badge/qemu-black?style=for-the-badge&logo=qemu)
 ![vbox](https://img.shields.io/badge/virtualbox-yellow?style=for-the-badge&logo=virtualbox)
 
-**A minimal operating system kernel built from scratch**
+**A minimal operating system and kernel built from scratch**
 
 ---
 
@@ -102,7 +102,10 @@ Then create a new VM in VirtualBox and attach `os.vdi` as a virtual hard disk. (
 
 > This project was developed and tested on EndeavourOS (Arch Linux) with zsh shell.
 
----
+### Error Codes
+| Error Code | Description | File |
+|------------|-------------|------|
+|🟨 **YELLOW** | Disk Error | `boot.asm` |
 
 <div align="center">
 Made with curiosity
