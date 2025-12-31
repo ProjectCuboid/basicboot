@@ -6,7 +6,8 @@ SECTIONS
     . = 0x1000;
     
     .text : {
-        *(.text)
+        kernel.o(.text)    /* Ensure kernel.o comes first so kernel_main is at 0x1000 */
+        *(.text)           /* All other .text sections follow */
     }
     
     .data : {
