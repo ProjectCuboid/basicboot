@@ -9,7 +9,7 @@ LDFLAGS  = -m elf_i386 -T linker.ld -nostdlib
 
 BOOT_SRC = boot.asm
 
-KERNEL_SRCS = kernel.c cubios-essentials.c # +++++++++ KERNEL.C MUST BE FIRST
+KERNEL_SRCS = kernel.c cubios-essentials.c
 
 KERNEL_OBJS = $(KERNEL_SRCS:.c=.o)
 

@@ -1,4 +1,4 @@
-#include "cubios-graphics.h"
+#include "cubios-essentials.h"
 
 void kernel_main(void) {
     clear_screen(0);
