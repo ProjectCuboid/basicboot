@@ -6,7 +6,7 @@
 ![opensource](https://img.shields.io/badge/opensource-green?style=for-the-badge&logo=opensourceinitiative&logoColor=%23ffffff&color=%236CC24A)
 ![release](https://img.shields.io/badge/2.1.1-beta-red?style=for-the-badge&logo=github)
 ![qemu](https://img.shields.io/badge/qemu-black?style=for-the-badge&logo=qemu)
-![vbox](https://img.shields.io/badge/virtualbox-yellow?style=for-the-badge&logo=virtualbox)
+![vbox](https://img.shields.io/badge/virtualbox-yellow?style=for-the-badge&logo=*virtualbox)
 
 **A minimal operating system and kernel built from scratch**
 
@@ -91,9 +91,11 @@ i686-linux-musl-gcc --version
 i686-linux-musl-ld --version
 ```
 
-### Using in VirtualBox
+### Using in VirtualBox [broken for now]
 ```bash
-VBoxManage convertfromraw os.img os.vdi --format VDI
+dd if=/dev/zero of=ospad.img bs=1M count=10 
+dd if=os.img of=ospad.img conv=notrunc 
+VBoxManage convertfromraw ospad.img os.vdi --format VDI
 ```
 Then create a new VM in VirtualBox and attach `os.vdi` as a virtual hard disk. ( Settings > Storage > Add Hard Disk, select `os.vdi`, delete the existing virtual disk if any. )
 ### ⚠️ Important
@@ -109,4 +111,6 @@ Then create a new VM in VirtualBox and attach `os.vdi` as a virtual hard disk. (
 
 <div align="center">
 Made with curiosity
+
+---
 </div>
