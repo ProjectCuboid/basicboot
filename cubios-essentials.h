@@ -1,11 +1,14 @@
 #ifndef GRAPHICS_H
 #define GRAPHICS_H
 
-#define VGA_WIDTH 320
-#define VGA_HEIGHT 200
-#define VGA_MEMORY 0xA0000
+#include <stdint.h>
 
-void draw_pixel(int x, int y, unsigned char color);
-void clear_screen(unsigned char color);
+extern uint16_t* framebuffer;
+extern uint16_t screen_width;
+extern uint16_t screen_height;
+extern uint16_t screen_pitch;
+
+void draw_pixel(int x, int y, uint8_t r, uint8_t g, uint8_t b);
+void clear_screen(uint8_t r, uint8_t g, uint8_t b);
 
 #endif

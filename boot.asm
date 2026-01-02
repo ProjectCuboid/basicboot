@@ -7,40 +7,60 @@ start:
     mov es, ax
     mov ss, ax
     mov sp, 0x7C00
-    
-    mov ax, 0x0013 ; +++++++ SET VGA MODE
-    int 0x10
-    
 
-    mov ax, 0x0000 ; +++++++ LOAD KERNEL FROM DISK
-    mov es, ax     ;   +++++ LOAD 9 SECTORS AT 0x1000
-    mov bx, 0x1000 ;   l
-    mov ah, 0x02   ;   l
-    mov al, 9      ; ++l
+    ; ---- get VESA mode info (0x111)
+    mov ax, 0x4F01
+    mov cx, 0x0111
+    mov di, vesa_info
+    int 0x10
+    cmp ax, 0x004F
+    jne disk_error
+
+    ; ---- set VESA 640x480x16bpp + LFB
+    mov ax, 0x4F02
+    mov bx, 0x4111
+    int 0x10
+    cmp ax, 0x004F
+    jne disk_error
+
+    ; ---- pass framebuffer info to kernel
+    mov eax, [vesa_info + 0x28] ; LFB address
+    mov [0x9000], eax
+
+    mov ax, [vesa_info + 0x10]  ; pitch
+    mov [0x9004], ax
+
+    mov ax, [vesa_info + 0x12]  ; width
+    mov [0x9006], ax
+
+    mov ax, [vesa_info + 0x14]  ; height
+    mov [0x9008], ax
+
+    ; ---- load kernel
+    mov ax, 0
+    mov es, ax
+    mov bx, 0x1000
+    mov ah, 0x02
+    mov al, 9
     mov ch, 0
     mov cl, 2
     mov dh, 0
     int 0x13
     jc disk_error
-    
 
-    cli            ; +++++++ ENTER PROTECTED MODE
+    cli
     lgdt [gdt_descriptor]
-    
     mov eax, cr0
     or eax, 1
     mov cr0, eax
-    
     jmp 0x08:protected_mode
 
 disk_error:
-    mov ax, 0xA000 ;   +++++ FILL SCREEN YELLOW ON DISK ERROR
-    mov es, ax     ;   l
-    xor di, di     ;   l
-    mov cx, 32000  ;   l
-    mov al, 14     ; ++l
-    rep stosb
     hlt
+
+vesa_info:
+    times 256 db 0
+
 
 [BITS 32]
 protected_mode:
